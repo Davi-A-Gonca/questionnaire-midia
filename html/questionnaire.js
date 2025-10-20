@@ -21,6 +21,7 @@ async function handleAPI(){
 
         const result = await resposta.json();
         response.textContent = result.response;
+        console.log(resposta);
     } catch(error){
         console.error('Erro: ', error)
     }
