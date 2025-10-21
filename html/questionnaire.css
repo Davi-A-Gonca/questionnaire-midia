@@ -1,11 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-}
-
 .container {
+    display: none;
     max-width: 800px;
     background-color: white;
     margin: 40px auto;
@@ -14,36 +8,16 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-h1 {
-    text-align: center;
-    color: #5a3fc7;
-}
-
-.grupo-pergunta {
-    margin-bottom: 30px;
-}
-
-.grupo-pergunta h3 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.opcao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-
 .botao {
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 15px;
     display: block;
     width: 100%;
     padding: 15px;
     background-color: #7a5be0;
     color: white;
     border: none;
-    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -53,80 +27,61 @@ h1 {
     background-color: #5a3fc7;
 }
 
+.botao_resposta {
+    background-color: #7a5be0;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.botao_resposta::after {
+    content: '\27A4';
+    font-size: 1.2em;
+}
+
 .resultado {
-    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 20px;
     background-color: #e8e8e8;
     border-radius: 10px;
 }
 
-/* =========================
-   🎨 ESTILO GERAL
-   ========================= */
+.inputResposta{
+    width: 100%;
+}
+
+.resposta{
+    display: flex;
+}
+
 body {
     background: linear-gradient(to top right, #52C2D8, #fff);
     background-attachment: fixed;
 }
 
-/* =========================
-   🎯 HEADER E TÍTULO
-   ========================= */
 .titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.titulo h2 {
-    font-size: xx-large;
+.titulo h1 {
+    font-size: 2.8em;
     margin: 0;
+    font-weight: bold;
+    color: #5a3fc7;
 }
 
-.rectangleTitle {
-    width: 275px;
-    height: 27px;
-    background: #906CF5;
-    border-radius: 40px 0px 40px 0px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.rectangleTitle:hover{
-    transform: scale(1.05);
-    background-color: #7a5be0;
-}
-
-/* =========================
-   📦 CONTAINER PRINCIPAL
-   ========================= */
-.container_principal {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-/* =========================
-   🔹 HEADER CONTAINER
-   ========================= */
-#container_titulo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    padding-top: 50px;
-    position: relative;
-    height: 80px;
-    z-index: 5;
-}
-
-/* =========================
-   📝 ÁREA DOS COMENTÁRIOS
-   ========================= */
-#container_corpo {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 50px;
-    box-sizing: border-box;
+.titulo h2 {
+    font-size: 1.57em;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
 }

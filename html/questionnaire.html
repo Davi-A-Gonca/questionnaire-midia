@@ -8,22 +8,33 @@
 
     <script src="questionnaire.js" defer></script>
 
-    <title>Nome do site</title>
+    <title>Questionário descanço</title>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>Teste de API</h1>
+    <div class="titulo">
+        <h1>Questionário para descansar</h1>
 
-        <label for="inputTest">Teste: </label>
-        <input type="text" id="inputTest" name="inputTest">
+        <h2>Você já ficou tão cansado que não sabia o que fazer?</br>
+        Você sabe que quer fazer alguma coisa, mas não quer escolher?</br>
+        Bem vindo ao <b>Questionário do Descanço!</b></br>Onde você responde a algumas perguntas
+        e uma IA vai te dar uma sugestão de como conseguir relaxar!</h2>
+    </div>
 
-        <button class="botao" onclick="handleAPI()">Ver Resultado</button>
+    <button class="botao" id="botao" onclick="startQuestionnaire()">Quero começar o questionário!</button>
 
+    <div class="container" id="container">
         <div class="resultado">
             <p id="resultado"></p>
         </div>
+
+        <label for="inputResposta">Resposta: </label>
+        <div class="resposta">
+            <input type="text" id="inputResposta" name="inputResposta" class="inputResposta">
+            <button class="botao_resposta" onclick="handleAPI()"></button>
+        </div>
+
     </div>
 
 </body>

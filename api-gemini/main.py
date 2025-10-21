@@ -38,8 +38,7 @@ def get_or_create_chat(session_id: str):
 
     model = genai.GenerativeModel(
         model_name=MODEL_NAME,
-        system_instruction="Você é um assistente de recomendação de relaxamento. Conduza um questionário em etapas para sugerir a melhor mídia para o descanso do usuário.",
-        generation_config={"max_output_tokens": 300,}
+        system_instruction="Você é um assistente de recomendação de relaxamento. Conduza um questionário em etapas para sugerir a melhor mídia para o descanso do usuário. Com um limte de uma pergunta por vez"
     )
     new_chat = model.start_chat()
     chat_sessions[session_id] = new_chat
