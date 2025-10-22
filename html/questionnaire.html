@@ -7,34 +7,38 @@
     <link rel="stylesheet" href="questionnaire.css">
 
     <script src="questionnaire.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 
     <title>Questionário descanço</title>
 </head>
 
 <body>
 
-    <div class="titulo">
-        <h1>Questionário para descansar</h1>
+    <div class="clado">
+        <div class="titulo">
+            <h1>Questionário para descansar</h1>
 
-        <h2>Você já ficou tão cansado que não sabia o que fazer?</br>
-        Você sabe que quer fazer alguma coisa, mas não quer escolher?</br>
-        Bem vindo ao <b>Questionário do Descanço!</b></br>Onde você responde a algumas perguntas
-        e uma IA vai te dar uma sugestão de como conseguir relaxar!</h2>
-    </div>
-
-    <button class="botao" id="botao" onclick="startQuestionnaire()">Quero começar o questionário!</button>
-
-    <div class="container" id="container">
-        <div class="resultado">
-            <p id="resultado"></p>
+            <h2>Você já ficou tão cansado que não sabia o que fazer?</br>
+            Você sabe que quer fazer alguma coisa, mas não quer escolher?</br>
+            Bem vindo ao <b>Questionário do Descanço!</b></br>Onde você responde a algumas perguntas
+            e uma IA vai te dar uma sugestão de como conseguir relaxar!</h2>
         </div>
 
-        <label for="inputResposta">Resposta: </label>
-        <div class="resposta">
-            <input type="text" id="inputResposta" name="inputResposta" class="inputResposta">
-            <button class="botao_resposta" onclick="handleAPI()"></button>
-        </div>
+        <button class="botao" id="botao" onclick="startQuestionnaire()">Quero começar o questionário!</button>
 
+        <div class="container" id="container">
+            <div class="resultado">
+                <p id="resultado"></p>
+            </div>
+
+            <label for="inputResposta">Resposta: </label>
+            <div class="resposta">
+                <input type="text" id="inputResposta" name="inputResposta" class="inputResposta">
+                <button class="botao_resposta" onclick="handleAPI()"></button>
+            </div>
+
+        </div>
     </div>
 
 </body>

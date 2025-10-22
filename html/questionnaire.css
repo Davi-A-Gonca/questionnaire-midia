@@ -1,75 +1,26 @@
-.container {
-    display: none;
-    max-width: 800px;
-    background-color: white;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.botao {
-    margin: 40px auto;
-    max-width: 800px;
-    border-radius: 15px;
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #7a5be0;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.botao:hover {
-    background-color: #5a3fc7;
-}
-
-.botao_resposta {
-    background-color: #7a5be0;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; 
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 0;
-}
-
-.botao_resposta::after {
-    content: '\27A4';
-    font-size: 1.2em;
-}
-
-.resultado {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #e8e8e8;
-    border-radius: 10px;
-}
-
-.inputResposta{
-    width: 100%;
-}
-
-.resposta{
-    display: flex;
-}
-
 body {
     background: linear-gradient(to top right, #52C2D8, #fff);
     background-attachment: fixed;
+    font-family: 'consolas';
+    font-size: 87%;
 }
 
+/* Centraliza tudo */
+.clado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Título */
 .titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .titulo h1 {
@@ -80,8 +31,96 @@ body {
 }
 
 .titulo h2 {
-    font-size: 1.57em;
+    font-size: 1.4em;
     max-width: 700px;
     margin: 20px auto;
     text-align: center;
+    color: #333;
+}
+
+/* Botão principal */
+.botao {
+    max-width: 400px;
+    border-radius: 50px !important;
+    padding: 12px 25px;
+    background-color: #7a5be0;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.botao:hover {
+    background-color: #5a3fc7;
+    transform: scale(1.03);
+}
+
+/* Container de perguntas */
+.container {
+    display: none;
+    max-width: 800px;
+    background-color: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Campo de resposta */
+.inputResposta {
+    flex: 1;
+    border-radius: 50px !important;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.inputResposta:focus {
+    border-color: #7a5be0;
+    box-shadow: 0 0 8px rgba(122, 91, 224, 0.4);
+}
+
+/* Botão de enviar */
+.botao_resposta {
+    background-color: #7a5be0;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50% !important;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao_resposta:hover {
+    background-color: #5a3fc7;
+    transform: scale(1.1);
+}
+
+.botao_resposta::after {
+    content: '\27A4';
+    font-size: 1.3em;
+}
+
+/* Resultado */
+.resultado {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #e5e5e5;
+    border-radius: 15px;
+}
+
+/* Linha de resposta */
+.resposta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

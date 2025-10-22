@@ -4,7 +4,9 @@ function startQuestionnaire(){
     const botao = document.getElementById("botao");
     const container = document.getElementById("container");
     const start = document.getElementById("inputResposta");
+    const response = document.getElementById("resultado");
 
+    response.innerHTML = "<p>carregando</p>"
     start.value = "Olá, estou pronto para começar o questionário";
     handleAPI();
     botao.style.display = 'none';
